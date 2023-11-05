@@ -15,7 +15,10 @@
     <input name="name">
     <label>Телефон</label>
     <input name="phone">
+    <label>Адреса</label>
+    <input name="address">
     <button type="submit">ВІДПРАВИТИ</button>
+    <button type="reset">ОЧИСТИТИ</button>
 
 </form>
 
@@ -30,6 +33,7 @@
         <th>Дата</th>
         <th>Ім'я</th>
         <th>Телефон</th>
+        <th>Адреса</th>
     </tr>
 {% for obj in object_list %}
     <tr>
@@ -37,6 +41,7 @@
         <th>{{ obj.order_dt }}</th>
         <th>{{ obj.order_name }}</th>
         <th>{{ obj.order_phone }}</th>
+        <th>{{ obj.order_address }}</th>
     </tr>
 {% endfor %}
 </table>
