@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Order
+from telebot.sendmessage import sendTelegram
 
 # Create your views here.
 
@@ -15,6 +16,7 @@ def thanks_page(request):
     address = request.POST['address']
     element = Order(order_name=name, order_phone=phone, order_address=address)
     element.save()
+    sendTelegram(tg_name=name, tg_phone=phone)
     return render(request, './thanks_page.html', {'name': name,
                                                   'phone': phone,
                                                   'address': address

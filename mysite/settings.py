@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'sql_base.apps.SqlBaseConfig',
+    'telebot.apps.TelebotConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
