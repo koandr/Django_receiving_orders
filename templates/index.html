@@ -9,6 +9,13 @@
 <br>
 <br>
 <br>
+
+<h1>Замовлення клінінг сервісу</h1>
+
+<br>
+<br>
+<br>
+
 <form action="{% url 'thanks_page' %}" method="POST">
     {% csrf_token %}
     <label>Ім'я</label>
@@ -17,6 +24,10 @@
     <input name="phone">
     <label>Адреса</label>
     <input name="address">
+    <br>
+    <br>
+    <br>
+<!--    <input type = "hidden" name="address" value="name_qwer">-->
     <button type="submit">ВІДПРАВИТИ</button>
     <button type="reset">ОЧИСТИТИ</button>
 
@@ -26,28 +37,7 @@
 <br>
 <br>
 
-{% if object_list %}
-<table border="1">
-    <tr>
-        <th>Id</th>
-        <th>Дата</th>
-        <th>Ім'я</th>
-        <th>Телефон</th>
-        <th>Адреса</th>
-    </tr>
-{% for obj in object_list %}
-    <tr>
-        <th>{{ obj.id }}</th>
-        <th>{{ obj.order_dt }}</th>
-        <th>{{ obj.order_name }}</th>
-        <th>{{ obj.order_phone }}</th>
-        <th>{{ obj.order_address }}</th>
-    </tr>
-{% endfor %}
-</table>
-{% else %}
-<h2>Даних немає</h2>
-{% endif %}
+
 
 </body>
 </html>
