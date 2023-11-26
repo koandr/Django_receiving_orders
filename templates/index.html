@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Замовлення сервісу</title>
 </head>
 <body>
 
@@ -10,33 +10,27 @@
 <br>
 <br>
 
-<h1>Замовлення клінінг сервісу</h1>
+<h1>Замовлення сервісу</h1>
 
 <br>
 <br>
 <br>
 
-<form action="{% url 'thanks_page' %}" method="POST">
+<form action="{% url 'customer_data' %}" method="POST">
     {% csrf_token %}
-    <label>Ім'я</label>
-    <input name="name">
-    <label>Телефон</label>
-    <input name="phone">
-    <label>Адреса</label>
-    <input name="address">
+    <input type="hidden" name="executor" value="виконавець_1">
+    <button type="submit">виконавець_1</button>
+
+    <input type="hidden" name="executor" value="виконавець_2">
+    <button type="submit">виконавець_2</button>
+
+    <input type="hidden" name="executor" value="виконавець_3">
+    <button type="submit">виконавець_3</button>
     <br>
     <br>
     <br>
-<!--    <input type = "hidden" name="address" value="name_qwer">-->
-    <button type="submit">ВІДПРАВИТИ</button>
-    <button type="reset">ОЧИСТИТИ</button>
 
 </form>
-
-<br>
-<br>
-<br>
-
 
 
 </body>

@@ -21,5 +21,6 @@ from sql_base import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.first_page, name='first_page'),
-    path('thanks/', views.thanks_page, name='thanks_page')
+    path('thanks/', views.thanks_page, name='thanks_page'),
+    path('customer/', views.customer_data, name='customer_data')
 ]
